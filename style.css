@@ -1081,33 +1081,32 @@ body.popup-open {
   color:#000;
 }
 
-
 .sponsor-card {
   background: rgba(0,0,0,0.85);
   border: 2px solid #ffdc41;
   border-radius: 12px;
-  padding: 20px 30px;
+  padding: 20px;
   text-align: center;
-  width: 260px;
+  width: 260px;        /* fixed width */
+  height: 230px;       /* fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 0 20px rgba(255,220,65,0.4);
   transition: 0.3s ease;
 }
 
 .sponsor-card img {
-  width: 180px;
-  height: auto;
+  max-width: 180px;
+  max-height: 80px;
+  object-fit: contain;
   margin-bottom: 15px;
 }
 
 .sponsor-card h3 {
+  color: #ffdc41;
   margin-bottom: 5px;
-  text-decoration: none;
-}
-
-.sponsor-link {
-  text-decoration: none;
-  color: #ffdc41;  /* Golden text */
-  font-weight: bold;
 }
 
 .sponsor-card p {
@@ -1115,7 +1114,12 @@ body.popup-open {
   font-size: 0.9rem;
 }
 
-.placeholder {
-  border-style: dashed;
-  opacity: 0.7;
+.sponsor-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255,220,65,0.8);
+}
+
+.sponsor-link {
+  text-decoration: none;
+  color: #ffdc41;
 }
